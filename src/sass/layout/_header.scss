@@ -2,13 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color:$color-bg;
   @include font($size: 1.4rem, $height: 2.1rem);
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   &__contacts {
     display: flex;

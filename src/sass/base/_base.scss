@@ -10,10 +10,11 @@ html {
 body {
   font-family: 'Inter';
   @include font($size: 1.6rem, $height: 2.4rem);
+  background-color: $color-bg;
 }
 
 h1 {
-  @include font($size: 7.4rem, $height: 8.9rem);
+  @include font($size: 7.4rem, $height: 8.9rem, $weight: 700);
 }
 
 h2 {
