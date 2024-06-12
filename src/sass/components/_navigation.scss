@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item {
+    padding-right: 26px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &__link {
+    color: $color-primary;
+    text-decoration: none;
+    @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        color: $color-button;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  @include font($size: 1.4rem, $height: 2.1rem);
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+  &__phone {
+    &-link {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: $color-primary;
+        width: 1px;
+        height: 24px;
+        pointer-events: none;
+        top: 0;
+        right: -13px;
+        opacity: 20%;
+      }
+    }
+  }
+  &__link {
+    color: $color-primary;   
+    text-decoration: none;
+    @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        color: $color-button;
+      }
+    }
+  }
+}
+

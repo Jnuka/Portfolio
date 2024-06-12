@@ -11,3 +11,19 @@ body {
   font-family: 'Inter';
   @include font($size: 1.6rem, $height: 2.4rem);
 }
+
+h1 {
+  @include font($size: 7.4rem, $height: 8.9rem);
+}
+
+h2 {
+  @include font($size: 2.8rem, $height: 4.2rem);
+}
+
+h3 {
+  @include font($size: 1.6rem, $height: 2.4rem);
+}
+
+h4 {
+  @include font($size: 1.4rem, $height: 2.1rem);
+}
