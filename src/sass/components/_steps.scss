@@ -1,0 +1,29 @@
+.steps {
+  &__wrapper {
+    margin-bottom: 180px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  &__step {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;    
+    border-top: 1px solid $color-primary;
+    border-bottom: 1px solid $color-primary;
+
+    &:not(:first-of-type) {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 29px;
+    }
+  }
+  &__title {
+    display: flex;
+    gap: 40px;
+  }
+}
