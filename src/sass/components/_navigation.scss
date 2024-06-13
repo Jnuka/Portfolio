@@ -3,9 +3,9 @@
   justify-content: space-between;
   align-items: center;
   &__item {
-    padding-right: 26px;
+    margin-right: 28px;
     &:last-child {
-      padding-right: 0;
+      margin-right: 0;
     }
   }
   &__link {
