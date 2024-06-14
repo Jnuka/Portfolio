@@ -1,0 +1,25 @@
+.skills {
+  &__wrapper {
+    margin-bottom: 180px;
+  }
+  &__text {
+    border-bottom: 1px solid $color-primary;
+    padding-right: 270px;
+    padding-bottom: 80px;
+    margin-bottom: 77px;
+  }
+  &__benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 80px;
+  }
+  &__benefit {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+}
