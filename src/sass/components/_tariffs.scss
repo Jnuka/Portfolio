@@ -1,0 +1,98 @@
+.tariffs {
+  &__wrapper {
+    margin-bottom: 137px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 80px;
+    gap: 19px;
+    border-bottom: 1px solid $color-primary;
+  }
+  &__name {
+    font-family: 'Inter-Bold';
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/icons/circle.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 140px;
+      height: 140px;
+      left: -74px;
+      top: -47px;
+      z-index: -1;
+    }
+  }
+  &__rate {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    gap: 20px;
+    &:not(:last-child) {
+      padding-bottom: 59px;
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+  &__inner {
+    flex-basis: 34%;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__description {
+    font-family: 'Inter-Medium';
+    margin-bottom: 75px;
+  }
+  &__arrow {
+    margin-left: 9px;
+  }
+  &__included {
+    flex-basis: 49.2%;
+    &-text {
+      font-family: 'Inter-Bold';
+      margin-bottom: 23px;
+    }
+    &-price {
+      font-family: 'Inter-Bold';
+      @include font($size: 4.2rem, $height: 6.3rem);
+      z-index: 1;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../assets/icons/circle.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90px;
+        height: 90px;
+        left: -45px;
+        top: -9px;
+        z-index: -1;
+      }
+    }
+  }
+  &__list {
+    list-style: none;
+    margin-left: 15px;
+    margin-bottom: 44px;
+    &-item {
+      margin-bottom: 8px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 100%;
+        top: 10px;
+        left: -14px;
+        width: 4px;
+        height: 4px;
+        background: $color-primary;
+      }
+    }
+  }
+
+}

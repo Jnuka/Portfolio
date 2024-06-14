@@ -48,32 +48,6 @@
     justify-content: space-between;
     margin-bottom: 120px;
   }
-  &__text {
-    @include font($size: 1.6rem, $height: 2.4rem, $weight: 700);
-    letter-spacing: .05rem;
-    cursor: pointer;
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 35px;
-      width: 0;
-      height: 2px;
-      background-color: $color-primary;
-      opacity: 0;
-      transform: translateX(-50%);
-      @extend %transition;
-    }
-    @media (hover: hover) {
-      &:hover {
-        &::after {
-          width: 170px;
-          opacity: 1;
-        }
-      }
-    }    
-  }
   &__arrow {
     margin-left: 9px;
   }

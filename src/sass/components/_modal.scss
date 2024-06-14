@@ -1,0 +1,28 @@
+.btn-modal {
+  font-family: 'Inter-Bold';
+  @include font($size: 1.6rem, $height: 2.4rem, $weight: 700);
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: $color-primary;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 35px;
+      width: 0;
+      height: 2px;
+      background-color: $color-primary;
+      opacity: 0;
+      transform: translateX(-50%);
+      @extend %transition;
+    }
+    @media (hover: hover) {
+      &:hover {
+        &::after {
+          width: 170px;
+          opacity: 1;
+        }
+      }
+    }
+}
