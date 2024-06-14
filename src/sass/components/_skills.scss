@@ -1,6 +1,6 @@
 .skills {
   &__wrapper {
-    margin-bottom: 172px;
+    margin-bottom: 181px;
   }
   &__text {
     border-bottom: 1px solid $color-primary;
@@ -12,14 +12,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 80px;
+    gap: 75px 21px;
   }
   &__benefit {
     display: flex;
     align-items: center;
     gap: 40px;
+  }  
+  &__content {
+    padding-right: 40px;
   }
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }

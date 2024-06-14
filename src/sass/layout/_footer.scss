@@ -1,0 +1,56 @@
+.footer { 
+  &__wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 40px 0;
+    margin-bottom: 42px;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 26px;
+  }
+  &__phone {
+    &-link {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: $color-primary;
+        width: 1px;
+        height: 24px;
+        pointer-events: none;
+        top: 0;
+        right: -13px;
+        opacity: 20%;
+      }
+    }
+  }
+  &__link {
+    color: $color-primary;   
+    text-decoration: none;
+    @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        color: $color-button;
+      }
+    }
+  }
+  &__copyright, 
+  &__made {
+    opacity: 30%;
+  }
+  &__made {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    span {
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+}
+
