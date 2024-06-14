@@ -30,3 +30,8 @@ h3 {
 h4 {
   @include font($size: 1.4rem, $height: 2.1rem);
 }
+
+h5 {
+  font-family: 'Inter-Medium';
+  @include font($size: 1.0rem, $height: 1.5rem);
+}
