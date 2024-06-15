@@ -17,7 +17,7 @@
   }
   &__name {
     text-transform: uppercase;
-    @include font($size: 2.8rem, $height: 4.2rem, $weight: 700);
+    font-family: 'Inter-Bold';
     letter-spacing: .09rem;
   }
   &__advantages {
@@ -28,7 +28,7 @@
     margin-left: 2px;
   }
   &__title {
-    @include font($size: 1.6rem, $height: 2.4rem, $weight: 700);
+    font-family: 'Inter-Bold';
     margin-bottom: 20px;
   }
 }

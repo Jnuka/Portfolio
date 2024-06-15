@@ -122,8 +122,8 @@
     padding-right: 10px;
   }
   &__title {
+    font-family: 'Inter-Bold';
     text-transform: uppercase;
     letter-spacing: 0.9px;
-    @include font($size: 1.6rem, $height: 2.4rem, $weight: 700);
   }
 }

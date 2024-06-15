@@ -6,23 +6,27 @@
     border-bottom: 1px solid $color-primary;
     padding-right: 270px;
     padding-bottom: 80px;
-    margin-bottom: 77px;
+    margin-bottom: 76px;
   }
   &__benefits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 75px 21px;
+    gap: 77px 21px;
   }
   &__benefit {
     display: flex;
     align-items: center;
     gap: 40px;
   }  
+  &__img {
+    margin-top: 3px;
+  }
   &__content {
     padding-right: 40px;
   }
   &__title {
+    font-family: 'Inter-Bold';
     margin-bottom: 8px;
   }
 }
