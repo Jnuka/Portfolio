@@ -1,9 +1,10 @@
 .about {
+  padding-top: 91px;
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 120px 17px;
-    margin-bottom: 180px;
+    margin-bottom: 89px;
     position: relative;
     &::before {
       content: '';
