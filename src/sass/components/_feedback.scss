@@ -1,0 +1,199 @@
+.feedback {
+  &__wrapper {
+    margin-bottom: 61px;
+  }
+  &__about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 59px;
+    gap: 20px;
+    border-bottom: 1px solid $color-primary;
+  }
+  &__title {
+    font-family: 'Inter-Bold';
+    letter-spacing: .1rem;
+    padding-right: 84px;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/icons/triangle.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 65px;
+      height: 69px;
+      z-index: -1;
+      left: -176px;
+      top: 26px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/icons/circle.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+      z-index: -2;
+      left: -152px;
+      top: -28px;
+    }    
+  }
+  &__description {
+    padding-right: 20px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    padding-bottom: 129px;
+    border-bottom: 1px solid $color-primary;
+    margin-top: 60px;
+    gap: 21px;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    list-style: none;    
+  }
+  &__item {
+    margin-right: 56px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $color-primary;
+      width: 1px;
+      height: 24px;
+      pointer-events: none;
+      top: 0;
+      right: -29px;
+      opacity: 20%;
+    }
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }  
+  &__link {
+    text-decoration: none;
+    color: $color-primary;
+    @extend %transition;
+    @media (hover: hover) {
+      &:hover {
+        color: $color-button;
+      }
+    }
+  }
+  &__line {
+    input {
+      cursor: pointer;
+      width: 100%;
+      color: $color-primary;
+      border: transparent;
+      background-color: rgba($color-primary, 0.1);
+      padding: 24px 20px;
+      margin-bottom: 20px;
+      &:focus {
+        outline: none;
+      }  
+    }
+  }
+  &__name {
+    margin-bottom: 10px;
+  }
+  &__btn {
+    font-family: 'Inter-Bold';
+    @include font($size: 1.6rem, $height: 2.4rem);
+    color: $color-bg;
+    background-color: $color-button;
+    border: transparent;
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px 0 21px 0;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba($color-button, 0.8);
+      }
+    }
+  }
+}
+
+.drop {
+  @include font($size: 1.2rem, $height: 1.8rem);
+  position: relative;
+  input[type="checkbox"] {
+    display:none;
+    &:checked{
+      ~.drop-items {
+        max-height: 400px;
+        padding-left: 10px;
+        padding-bottom: 13px;
+        opacity:1;
+      }
+      ~.control {       
+        z-index:10;
+        .control__img {
+          transform: rotate(-180deg);
+        }
+      }
+      ~.overlay-close {
+        transform: none;
+        pointer-events:initial;
+      }
+    }
+  }
+  .control {
+    display: flex;
+    justify-content: space-between;
+    color: $color-primary;
+    cursor: pointer;
+    padding: 24px 20px 25px 20px;
+    background: rgba($color-primary, 0.1);
+    &__img {
+      margin: -3px 4px 0px 0;
+      transition: all .3s ease; 
+    }
+  }
+  .drop-items {
+    position: absolute;   
+    width: 100%;
+    padding:0;
+    margin:0;
+    transition: all .3s ease;    
+    background-color: rgb(218, 217, 216);   
+    overflow:hidden;
+    max-height:0;
+    opacity:0;
+    z-index:10;    
+    .item-drop {
+      list-style:none;
+      a {
+        display:block;
+        color: rgba($color-primary, 0.4);
+        text-decoration: none;
+        padding: 3px 10px 5px 10px;
+        transition: all .3s ease;
+        @media (hover: hover) {
+          &:hover{
+            color: $color-primary;
+          }         
+        }
+      }
+    }
+  }
+  .overlay-close {
+    position: fixed;    
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:9;
+    transform: translate(100%,0);
+    pointer-events:none;
+  }
+}

@@ -71,13 +71,19 @@
           <img class="label__arrow" src="./assets/icons/arrow.svg" alt="arrow">
         </a>
         <ul class="label__social">
-          <li class="label__link">Vk</li>
-          <li class="label__link">Instagram</li>
-          <li class="label__link">Linkedin</li>
+          <li class="label__item">
+            <a class="feedback__link" href="#">Vk</a>
+          </li>
+          <li class="label__item">
+            <a class="feedback__link" href="#">Instagram</a>
+          </li>
+          <li class="label__item">
+            <a class="feedback__link" href="#">Linkedin</a>
+          </li>
         </ul>
       </div>
       <div class="label__skills">
-        <div class="label__item">
+        <div class="label__skill">
           <h3 class="label__title">
             Front-end
           </h3>
@@ -85,7 +91,7 @@
             HTML+CSS+JS кодирование дизайнов любой сложности
           </h4>
         </div>
-        <div class="label__item">
+        <div class="label__skill">
           <h3 class="label__title">
             Back-end
           </h3>
@@ -93,7 +99,7 @@
             Разработка сложной back-end логики для готового front-end
           </h4>
         </div>
-        <div class="label__item">
+        <div class="label__skill">
           <h3 class="label__title">
             Wordpress
           </h3>
@@ -101,7 +107,7 @@
             Разработка сайтов - от блога до&nbsp;интернет магазина
           </h4>
         </div>
-        <div class="label__item">
+        <div class="label__skill">
           <h3 class="label__title">
             SEO продвижение
           </h3>
@@ -458,6 +464,64 @@
     </div>
   </section>
 
+  <section class="feedback">
+    <div class="wrapper feedback__wrapper">
+      <div class="feedback__about">
+        <h2 class="feedback__title">
+          Расскажите о&nbsp;своем&nbsp;проекте
+        </h2>
+        <h2 class="feedback__description">
+          Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и я свяжусь с&nbsp;вами в
+          ближайшее время
+        </h2>
+      </div>
+      <div class="feedback__content">
+        <ul class="feedback__social">
+          <li class="feedback__item">
+            <a class="feedback__link" href="#">Vk</a>
+          </li>
+          <li class="feedback__item">
+            <a class="feedback__link" href="#">Instagram</a>
+          </li>
+          <li class="feedback__item">
+            <a class="feedback__link" href="#">Linkedin</a>
+          </li>
+        </ul>
+        <div class="feedback__form">
+          <form action method="POST">
+            <div class="feedback__line">
+              <h5 class="feedback__name">Телефон или почта</h5>
+              <input type="text" name="name" placeholder="Введите телефон или почту" autocomplete="off">
+              <h5 class="feedback__name">Выберите удобный способ связи</h5>
+              <label class="drop">
+                <input type="checkbox" id="target-drop-example">
+                <span class="control">Telegram
+                  <img class="control__img" src="./assets/icons/arrow-form.svg" alt="arrow-form">
+                </span>
+                <ul class="drop-items">
+                  <li class="item-drop">
+                    <a target="_blank" href="#">WhatsApp</a>
+                  </li>
+                  <li class="item-drop">
+                    <a target="_blank" href="#">Viber</a>
+                  </li>
+                  <li class="item-drop">
+                    <a target="_blank" href="#">Звонок на телефон</a>
+                  </li>
+                  <li class="item-drop">
+                    <a target="_blank" href="#">SMS сообщение</a>
+                  </li>
+                </ul>
+                <label class="overlay-close" for="target-drop-example"></label>
+              </label>
+            </div>
+            <button class="feedback__btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="wrapper footer__wrapper">
       <nav class="footer__navigation">
@@ -502,7 +566,7 @@
         </h4>
       </div>
       <h5 class="footer__copyright">© 2020, Все права защищены</h5>
-      <h5 class="footer__made">Сделано в рамках курса учебной платформы <span> Annblok</span></h5>
+      <h5 class="footer__made">Сделано в рамках курса учебной платформы <span>Frontend Blok</span></h5>
     </div>
   </footer>
 </body>

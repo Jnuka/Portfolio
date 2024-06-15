@@ -1,6 +1,7 @@
 .navigation {
   display: flex;
   align-items: center;
+  @include font($size: 1.4rem, $height: 2.1rem);
   &__item {
     margin-right: 28px;
     &:last-child {

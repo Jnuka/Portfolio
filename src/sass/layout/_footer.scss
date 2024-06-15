@@ -4,7 +4,7 @@
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    gap: 40px 0;
+    gap: 36px 0;
     margin-bottom: 42px;
   }
   &__contacts {
@@ -41,15 +41,22 @@
   }
   &__copyright, 
   &__made {
-    opacity: 30%;
+    color: rgba($color: $color-primary, $alpha: 0.3);
   }
   &__made {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 5px;    
     span {
-      border-bottom: 1px solid $color-primary;
+      cursor: pointer;
+      border-bottom: 1px solid rgba($color: $color-primary, $alpha: 0.3);;
+      @extend %transition;
+      @media (hover: hover) {
+        &:hover {
+          color: rgba($color: $color-primary, $alpha: 1.0);
+        }
+      }
     }
   }
 }
