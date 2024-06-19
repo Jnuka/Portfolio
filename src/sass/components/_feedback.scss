@@ -144,20 +144,27 @@
       }
       ~.overlay-close {
         transform: none;
-        pointer-events:initial;
+        // pointer-events:initial;
       }
     }
   }
   .control {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: $color-primary;
     cursor: pointer;
     padding: 24px 20px 25px 20px;
     background: rgba($color-primary, 0.1);
     &__img {
+      background-image: url('./../assets/icons/arrow-form.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 7px;
       margin: -3px 4px 0px 0;
       transition: all .3s ease; 
+      cursor: pointer;
     }
   }
   .drop-items {

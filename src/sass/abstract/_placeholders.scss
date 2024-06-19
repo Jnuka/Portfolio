@@ -25,3 +25,9 @@
 %transition {
   transition: all .3s ease-out;
 }
+
+@keyframes modal-active {  
+  0% {top: -200%;}
+  50% {top: 5%;}
+  100% {top: 0;}  
+}
