@@ -10,35 +10,65 @@
 <body>
   <header class="header">
     <div class="wrapper header__wrapper">
-      <nav class="header__navigation">
-        <ul class="navigation">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#about">
-              Обо мне
+      <div class="header__content">
+        <nav class="header__navigation">
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#about">
+                Обо мне
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#portfolio">
+                Портфолио
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#steps">
+                Этапы работ
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#tariffs">
+                Цены
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#feedback">
+                Обратная связь
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <h4 class="header__phone">
+            <a class="header__phone-link header__link" href="tel:+89237777777">
+              8 923 777-77-77
             </a>
+          </h4>
+          <h4 class="header__email">
+            <a class="header__email-link header__link" href="mailto:alexdev@gmail.com">
+              alexdev@gmail.com
+            </a>
+          </h4>
+        </div>
+        <ul class="label__social">
+          <li class="label__item">
+            <a class="label__link" href="#">Vk</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#portfolio">
-              Портфолио
-            </a>
+          <li class="label__item">
+            <a class="label__link" href="#">Instagram</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#steps">
-              Этапы работ
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#tariffs">
-              Цены
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#feedback">
-              Обратная связь
-            </a>
+          <li class="label__item">
+            <a class="label__link" href="#">Linkedin</a>
           </li>
         </ul>
-      </nav>
+      </div>
+      <div class="header__hamburger">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </div>
       <div class="header__contacts">
         <h4 class="header__phone">
           <a class="header__phone-link header__link" href="tel:+89237777777">
@@ -51,12 +81,15 @@
           </a>
         </h4>
       </div>
+      <div class="header__background"></div>
     </div>
   </header>
 
   <section class="label">
     <div class="wrapper label__wrapper">
-      <img class="label__img" src="./assets/images/photo.png" alt="photo">
+      <div class="label__img">
+        <img class="label__photo" src="./assets/images/photo.png" alt="photo">
+      </div>
       <div class="label__about">
         <h2 class="label__name">
           Александр Антропов
@@ -121,13 +154,15 @@
 
   <section class="about" id="about">
     <div class="wrapper about__wrapper">
-      <h2 class="about__name">
-        Обо мне
-      </h2>
-      <h2 class="about__text">
-        Создаю только эффективные решения, которые работают на результат: от&nbsp;одностраничных сайтов, до крупных
-        интернет-порталов.
-      </h2>
+      <div class="about__content">
+        <h2 class="about__name">
+          Обо мне
+        </h2>
+        <h2 class="about__text">
+          Создаю только эффективные решения, которые работают на результат: от&nbsp;одностраничных сайтов, до крупных
+          интернет-порталов.
+        </h2>
+      </div>
       <div class="about__advantages">
         <div class="about__advantage">
           <h3 class="about__title">
@@ -158,7 +193,7 @@
             Качество
           </h3>
           <h4 class="about__description">
-            Высокое качество как графических материалов, так и внутренних алгоритмов работы сайта
+            Высокое качество как графических материалов, так&nbsp;и внутренних алгоритмов работы сайта
           </h4>
         </div>
       </div>
@@ -170,9 +205,9 @@
       <div class="steps__content">
         <div class="steps__step">
           <h2 class="steps__title">
-            <p class="steps__number">
+            <span class="steps__number">
               01
-            </p>
+            </span>
             Вы заказываете сайт
           </h2>
           <h3 class="steps__text">
@@ -181,9 +216,9 @@
         </div>
         <div class="steps__step">
           <h2 class="steps__title">
-            <p class="steps__number">
+            <span class="steps__number">
               02
-            </p>
+            </span>
             Обговариваем детали
           </h2>
           <h3 class="steps__text">
@@ -192,13 +227,13 @@
         </div>
         <div class="steps__step">
           <h2 class="steps__title">
-            <p class="steps__number">
+            <span class="steps__number">
               03
-            </p>
+            </span>
             Этап программирования
           </h2>
           <h3 class="steps__text">
-            Верстаю сайт по вашему проекту пиксель в пиксель
+            Верстаю сайт по&nbsp;вашему проекту пиксель в пиксель
           </h3>
         </div>
       </div>
@@ -207,15 +242,15 @@
 
   <section class="portfolio" id="portfolio">
     <div class="wrapper">
-      <div class="h2 portfolio__title">
+      <h2 class="portfolio__title">
         Портфолио
-      </div>
+      </h2>
     </div>
     <div class="portfolio__bg">
       <div class="wrapper portfolio__wrapper">
         <div class="portfolio__sites">
           <div class="portfolio__site">
-            <h2 class="h2 portfolio__name">
+            <h2 class="portfolio__name">
               Agata Bielen
             </h2>
             <div class="portfolio__description">
@@ -237,7 +272,7 @@
             </a>
           </div>
           <div class="portfolio__site">
-            <h2 class="h2 portfolio__name">
+            <h2 class="portfolio__name">
               Lemon
             </h2>
             <div class="portfolio__description">
@@ -407,10 +442,12 @@
           <div class="tariffs__inner">
             <h2 class="tariffs__title">Разработка лэндинга или сайт визитки</h2>
             <h3 class="tariffs__description">Небольшой сайт состоящий из одной страницы</h3>
-            <a class="btn-modal tariffs__text">
-              Обсудить проект
-              <img class="tariffs__arrow" src="./assets/icons/arrow.svg" alt="arrow">
-            </a>
+            <div class="tariffs__btn">
+              <a class="btn-modal tariffs__text">
+                Обсудить проект
+                <img class="tariffs__arrow" src="./assets/icons/arrow.svg" alt="arrow">
+              </a>
+            </div>
           </div>
           <div class="tariffs__included">
             <h3 class="tariffs__included-text">Что входит</h3>
@@ -426,10 +463,12 @@
           <div class="tariffs__inner">
             <h2 class="tariffs__title">Разработка корпоративного сайта</h2>
             <h3 class="tariffs__description">Небольшой сайт с n-количеством страниц</h3>
-            <a class="btn-modal tariffs__btn">
-              Обсудить проект
-              <img class="tariffs__arrow" src="./assets/icons/arrow.svg" alt="arrow">
-            </a>
+            <div class="tariffs__btn">
+              <a class="btn-modal tariffs__text">
+                Обсудить проект
+                <img class="tariffs__arrow" src="./assets/icons/arrow.svg" alt="arrow">
+              </a>
+            </div>
           </div>
           <div class="tariffs__included">
             <h3 class="tariffs__included-text">Что входит</h3>
@@ -443,12 +482,14 @@
         </div>
         <div class="tariffs__rate">
           <div class="tariffs__inner">
-            <h2 class="tariffs__title">Разработка интернет&nbsp;-&nbsp;магазина</h2>
+            <h2 class="tariffs__title">Разработка интернет&nbsp;-магазина</h2>
             <h3 class="tariffs__description">Полноценный каталог вашей продукции</h3>
-            <a class="btn-modal tariffs__btn btn">
-              Обсудить проект
-              <img class="tariffs__arrow" src="./assets/icons/arrow.svg" alt="arrow">
-            </a>
+            <div class="tariffs__btn">
+              <a class="btn-modal tariffs__text">
+                Обсудить проект
+                <img class="tariffs__arrow" src="./assets/icons/arrow.svg" alt="arrow">
+              </a>
+            </div>
           </div>
           <div class="tariffs__included">
             <h3 class="tariffs__included-text">Что входит</h3>

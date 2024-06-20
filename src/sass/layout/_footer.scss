@@ -6,14 +6,46 @@
     justify-content: space-between;
     gap: 36px 0;
     margin-bottom: 42px;
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-bottom: 27px;
+    }
+  }
+  &__navigation {
+    @include media-tablet {
+      order: 2;
+      margin-bottom: 15px;
+    }
+    @include media-mobile-600 {
+      .navigation {
+        @include font($size: 1.0rem, $height: 1.5rem);
+        gap: 9px;
+        &__item {
+          margin-right: 8px;
+        }
+      }
+    }
+    .navigation {
+      gap: 18px;
+    }
   }
   &__contacts {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 26px;
+    @include media-tablet {
+      order: 1;
+      margin-bottom: 15px;
+    }
   }
   &__phone {
+    @include media-mobile-600 {
+      @include font($size: 1.4rem, $height: 2.1rem);
+    }
     &-link {
       position: relative;
       &::after {
@@ -33,6 +65,9 @@
     color: $color-primary;   
     text-decoration: none;
     @extend %transition;
+    @include media-mobile-600 {
+      @include font($size: 1.4rem, $height: 2.1rem);
+    }
     @media (hover: hover) {
       &:hover {
         color: $color-button;
@@ -43,11 +78,19 @@
   &__made {
     color: rgba($color: $color-primary, $alpha: 0.3);
   }
+  &__copyright {
+    @include media-tablet {
+      order: 3;
+    }
+  }
   &__made {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 5px;    
+    gap: 5px;   
+    @include media-tablet {
+      order: 4;
+    } 
     span {
       cursor: pointer;
       border-bottom: 1px solid rgba($color: $color-primary, $alpha: 0.3);;

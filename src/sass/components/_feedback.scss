@@ -1,7 +1,13 @@
 .feedback {
   padding-top: 91px;
+  @include media-mobile {
+    padding-top: 80px;
+  }
   &__wrapper {
     margin-bottom: 61px;
+    @include media-mobile {
+      margin-bottom: 43px;
+    }
   }
   &__about {
     display: grid;
@@ -9,6 +15,12 @@
     padding-bottom: 59px;
     gap: 20px;
     border-bottom: 1px solid $color-primary;
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
   }
   &__title {
     font-family: 'Inter-Bold';
@@ -27,6 +39,12 @@
       z-index: -1;
       left: -176px;
       top: 26px;
+      @include media-mobile {
+        width: 27px;
+        height: 29px;
+        left: 98px;
+        top: -44px;
+      }
     }
     &::after {
       content: '';
@@ -39,6 +57,12 @@
       z-index: -2;
       left: -152px;
       top: -28px;
+      @include media-mobile {
+        width: 190px;
+        height: 190px;
+        left: -54px;
+        top: -51px;
+      }
     }    
   }
   &__description {
@@ -52,6 +76,17 @@
     border-bottom: 1px solid $color-primary;
     margin-top: 60px;
     gap: 21px;
+    @include media-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      padding-bottom: 60px;
+    }
+    @include media-mobile-600 {
+      margin-top: 40px;
+    }
   }
   &__social {
     display: flex;
@@ -61,6 +96,12 @@
   &__item {
     margin-right: 56px;
     position: relative;
+    @include media-tablet {
+      margin-right: 28px;
+    }
+    @include media-mobile-600 {
+      margin-right: 20px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -71,6 +112,13 @@
       top: 0;
       right: -29px;
       opacity: 20%;
+      @include media-tablet {
+        right: -15px;
+      }
+      @include media-mobile-600 {
+        height: 15px;
+        right: -10px;
+      }
     }
     &:last-child {
       margin-right: 0;
@@ -89,6 +137,9 @@
       }
     }
   }
+  &__form {
+    width: 100%;
+  }
   &__line {
     input {
       cursor: pointer;
@@ -98,6 +149,9 @@
       background-color: rgba($color-primary, 0.1);
       padding: 24px 20px;
       margin-bottom: 20px;
+      @include media-mobile-600 {
+        margin-bottom: 10px;
+      }
       &:focus {
         outline: none;
       }  
@@ -105,6 +159,9 @@
   }
   &__name {
     margin-bottom: 10px;
+    @include media-mobile {
+      margin-bottom: 8px;
+    }
   }
   &__btn {
     font-family: 'Inter-Bold';
@@ -116,6 +173,11 @@
     margin-top: 40px;
     padding: 20px 0 21px 0;
     cursor: pointer;
+    @include media-mobile {
+      @include font($size: 1.2rem, $height: 1.8rem);
+      margin-top: 19px;
+      padding: 20px 0 17px 0;
+    }
     @media (hover: hover) {
       &:hover {
         background-color: rgba($color-button, 0.8);
@@ -127,6 +189,9 @@
 .drop {
   @include font($size: 1.2rem, $height: 1.8rem);
   position: relative;
+  @include media-mobile {
+    @include font($size: 1.0rem, $height: 1.5rem);
+  }
   input[type="checkbox"] {
     display:none;
     &:checked{

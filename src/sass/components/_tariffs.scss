@@ -1,7 +1,13 @@
 .tariffs {
   padding-top: 91px;
+  @include media-mobile {
+    padding-top: 80px;
+  }
   &__wrapper {
     margin-bottom: 91px;
+    @include media-mobile {
+      margin-bottom: 0;
+    }
   }
   &__content {
     display: grid;
@@ -9,6 +15,13 @@
     padding-bottom: 80px;
     gap: 19px;
     border-bottom: 1px solid $color-primary;
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+    @include media-mobile {
+      padding-bottom: 30px;
+    }
   }
   &__name {
     font-family: 'Inter-Bold';
@@ -28,31 +41,68 @@
       z-index: -1;
     }
   }
+  &__text {
+    z-index: 1;
+  }
   &__rate {
     display: flex;
     justify-content: space-between;
     padding-top: 60px;
     gap: 20px;
+    @include media-mobile {
+      padding-top: 40px;      
+    }
     &:not(:last-child) {
       padding-bottom: 59px;
       border-bottom: 1px solid $color-primary;
     }
+    @include media-tablet {
+      &:not(:last-child) {
+        padding-bottom: 37px;
+      }
+      &:last-child {
+        padding-bottom: 37px;
+        border-bottom: 1px solid $color-primary;
+      }
+    }
   }
   &__inner {
     flex-basis: 34%;
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 40%;
+      gap: 20px
+    }
   }
   &__title {
     margin-bottom: 20px;
+    @include media-tablet {
+      margin-bottom: 0;
+    }
   }
   &__description {
     font-family: 'Inter-Medium';
     margin-bottom: 75px;
+    @include media-tablet {
+      margin-bottom: 0;
+    }
   }
   &__arrow {
     margin-left: 9px;
+    @include media-mobile-600 {
+      width: 10px;
+      margin-left: 10px;
+    }
   }
   &__included {
     flex-basis: 49.2%;
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     &-text {
       font-family: 'Inter-Bold';
       margin-bottom: 23px;
@@ -62,6 +112,9 @@
       @include font($size: 4.2rem, $height: 6.3rem);
       z-index: 1;
       position: relative;
+      @include media-mobile {
+        @include font($size: 2.2rem, $height: 3.3rem);
+      }
       &::after {
         content: '';
         position: absolute;
@@ -73,6 +126,12 @@
         left: -45px;
         top: -9px;
         z-index: -1;
+        @include media-mobile {
+          width: 40px;
+          height: 40px;
+          left: -17px;
+          top: -4px;
+        }
       }
     }
   }
@@ -80,6 +139,9 @@
     list-style: none;
     margin-left: 15px;
     margin-bottom: 44px;
+    @include media-mobile {
+      margin-bottom: 30px;
+    }
     &-item {
       margin-bottom: 8px;
       position: relative;

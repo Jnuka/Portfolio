@@ -1,19 +1,33 @@
 .about {
   padding-top: 91px;
+  @include media-mobile {
+    padding-top: 80px;;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    gap: 120px 17px;
+    grid-template-rows: auto 1fr; 
+    gap: 60px 0;
     margin-bottom: 89px;
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      background-color: $color-primary;
-      width: 96.5%;
-      height: 1px;
-      top: 227px;
-      left: 22px;
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    display: grid;    
+    grid-column: 1 / 5;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 59px;
+    border-bottom: 1px solid $color-primary;
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 39px;
     }
   }
   &__name {
@@ -21,15 +35,34 @@
     font-family: 'Inter-Bold';
     letter-spacing: .09rem;
   }
+  &__text {
+    @include media-tablet {
+      font-size: clamp(1.6rem, 3.1vw, 2.8rem);
+    }
+  }
+  &__advantage {
+    @include media-mobile {
+      padding-right: 24px;
+    }
+  }
   &__advantages {
     display: grid;
     grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
     gap: 60px 20px;
     grid-column: 2 / 3;
-    margin-left: 2px;
+    margin-left: 11px;
+    @include media-mobile {
+      margin-top: 20px;
+      margin-left: 0;
+      gap: 30px 0px;
+    }
   }
   &__title {
     font-family: 'Inter-Bold';
     margin-bottom: 20px;
+    @include media-mobile {
+      margin-bottom: 15px;
+    }
   }
 }

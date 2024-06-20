@@ -1,10 +1,13 @@
 .btn-modal {
   font-family: 'Inter-Bold';
   @include font($size: 1.6rem, $height: 2.4rem, $weight: 700);
-    cursor: pointer;
-    position: relative;
-    text-decoration: none;
-    color: $color-primary;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: $color-primary;
+  @include media-mobile-600 {
+    @include font($size: 1.2rem, $height: 1.8rem);
+  }
     &::after {
       content: '';
       position: absolute;
@@ -16,12 +19,18 @@
       opacity: 0;
       transform: translateX(-50%);
       @extend %transition;
+      @include media-mobile {
+        top: 32px;
+      }
     }
     @media (hover: hover) {
       &:hover {
         &::after {
           width: 170px;
           opacity: 1;
+          @include media-mobile {
+            width: 100%;
+          }
         }
       }
     }
@@ -57,6 +66,9 @@
     width: 600px;
     height: 100%;
     background: $color-bg;
+    @include media-mobile {
+      width: 360px;
+    }
   }
   &__inner {
   padding: 55px 20px 40px 20px;
@@ -69,6 +81,9 @@
     border-bottom: 1px solid $color-primary;
     padding: 0 60px 29px 60px;
     margin-bottom: 40px;
+    @include media-mobile {
+      padding: 0 30px 29px 30px;
+    }
   }
   &__title {
     font-family: 'Inter-Bold';
@@ -77,10 +92,17 @@
     flex-wrap: nowrap;
     margin-bottom: 15px;
     letter-spacing: .07rem;
+    @include media-mobile {
+      @include font($size: 1.6rem, $height: 2.4rem);
+      text-align: center;
+    }
   }
   &__description {
     text-align: center;
     padding: 0 50px;
+    @include media-mobile {
+      padding: 0;
+    }
   }
   .modal__close-button {
     display: flex;

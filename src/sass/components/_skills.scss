@@ -1,18 +1,42 @@
 .skills {
   &__wrapper {
     margin-bottom: 181px;
+    @include media-tablet {
+      margin-bottom: 90px;
+    }
+    @include media-mobile {
+      margin-bottom: 60px;
+    }
   }
   &__text {
     border-bottom: 1px solid $color-primary;
     padding-right: 270px;
     padding-bottom: 80px;
     margin-bottom: 76px;
+    @include media-tablet {
+      padding-right: 0;
+    }
+    @include media-mobile {
+      padding-bottom: 40px;
+      margin-bottom: 38px;
+      padding-right: 1px;
+    }
   }
   &__benefits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 77px 21px;
+    @include media-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 30px;
+    }
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 27px;
+    }
   }
   &__benefit {
     display: flex;
@@ -21,12 +45,27 @@
   }  
   &__img {
     margin-top: 3px;
+    @include media-mobile {
+      width: 30px;
+      height: 30px;
+    }
   }
   &__content {
     padding-right: 40px;
+    @include media-tablet {
+      padding-right: 0;
+    }
   }
   &__title {
     font-family: 'Inter-Bold';
     margin-bottom: 8px;
+    @include media-mobile {
+      margin-bottom: 15px;
+    }
+  }
+  &__description {
+    @include media-mobile {
+      @include font($size: 1.2rem, $height: 1.8rem);
+    }
   }
 }

@@ -1,9 +1,14 @@
 .navigation {
   display: flex;
   align-items: center;
+  gap: 28px;
   @include font($size: 1.4rem, $height: 2.1rem);
+  @include media-mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
   &__item {
-    margin-right: 28px;
     &:last-child {
       margin-right: 0;
     }
@@ -16,6 +21,30 @@
       &:hover {
         color: $color-button;
       }
+    }
+  }
+}
+
+.navigation__item-activ {
+  .navigation__link {
+    color: $color-button;
+  } 
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 1px;
+    top: 24px;
+    width: 114px;
+    height: 3px;
+    background-color: $color-primary;
+  }
+  @include media-mobile {
+    &::before {
+      left: 0px;
+      top: 50px;
+      width: 243px;
     }
   }
 }

@@ -1,6 +1,9 @@
 .technologies {
   &__wrapper {
     margin-bottom: 86px;
+    @include media-mobile {
+      margin-bottom: 0;
+    }
   }
   &__content {
     display: grid;
@@ -18,11 +21,21 @@
     position: relative;
     opacity: 30%;
     @extend %transition;
+    @include media-mobile {
+      height: clamp(44px, 20vw, 148px);
+    }
     &:first-child {
       border-left: 1px solid $color-primary;
     }
     &:nth-child(5) {
       border-left: 1px solid $color-primary;
+    }
+    &:nth-child(6) {
+      .technologies__img {
+        @include media-tablet {
+          width: clamp(31px, 12vw, 105px);
+        }
+      }
     }
     @media (hover: hover) {
       &:hover {
@@ -41,6 +54,9 @@
   &__img {
     filter: grayscale(1);
     @extend %transition;
+    @include media-tablet {
+      width: clamp(20px, 8vw, 75px);
+    }
   }
   &__text {
     visibility: hidden;
