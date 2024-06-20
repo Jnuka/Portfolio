@@ -18,9 +18,6 @@
     }
   }
   &__navigation {
-    @include media-mobile {
-      // display: none;
-    }
     .navigation {
       @include media-tablet {
         gap: 10px;

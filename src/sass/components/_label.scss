@@ -253,7 +253,6 @@
       margin-right: 0;
     }
     .label__link {
-      // color: $color-button;
       &::after{
         height: 15px;
         right: -12px;
@@ -262,7 +261,6 @@
   }
   @include media-mobile-600 {
     .label__link {
-      // color: $color-button;
       &::after{
         height: 15px;
         right: -12px;
