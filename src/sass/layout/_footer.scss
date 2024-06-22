@@ -16,20 +16,18 @@
   }
   &__navigation {
     .navigation {
-      gap: 18px;
+      gap: 20px;
+      @include media-tablet {
+        gap: 22px;
+      }
+      @include media-mobile-600 {
+        @include font($size: 1.0rem, $height: 1.5rem);
+        gap: 15px;
+      }
     }
     @include media-tablet {
       order: 2;
       margin-bottom: 15px;
-    }
-    @include media-mobile-600 {
-      .navigation {
-        @include font($size: 1.0rem, $height: 1.5rem);
-        gap: 9px;
-        &__item {
-          margin-right: 8px;
-        }
-      }
     }
   }
   &__contacts {
