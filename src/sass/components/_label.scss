@@ -90,6 +90,7 @@
   }
   &__name {
     margin-bottom: 33px;
+    @include font($size: 2.8rem, $height: 4.2rem);
     @include media-tablet {
       margin-bottom: 22px;
       font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -234,6 +235,12 @@
     font-family: 'Inter-Bold';
     text-transform: uppercase;
     letter-spacing: 0.9px;
+  }
+  &__description {
+    @include font($size: 1.4rem, $height: 2.1rem);
+    @include media-mobile-600 {
+      @include font($size: 1.0rem, $height: 1.5rem);
+    }
   }
 }
 

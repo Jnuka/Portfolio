@@ -67,6 +67,10 @@
   }
   &__description {
     padding-right: 20px;
+    @include font($size: 2.8rem, $height: 4.2rem);
+    @include media-mobile-600 {
+      @include font($size: 1.6rem, $height: 2.4rem);
+    }
   }
   &__content {
     display: grid;

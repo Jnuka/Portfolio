@@ -13,13 +13,19 @@
     padding-right: 270px;
     padding-bottom: 80px;
     margin-bottom: 76px;
+    @include font($size: 2.8rem, $height: 4.2rem);
     @include media-tablet {
       padding-right: 0;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: clamp(2.7rem, 5vw, 4.2rem);
     }
     @include media-mobile {
       padding-bottom: 40px;
       margin-bottom: 38px;
       padding-right: 1px;
+    }
+    @include media-mobile-600 {
+      @include font($size: 1.6rem, $height: 2.4rem);
     }
   }
   &__benefits {
@@ -64,8 +70,9 @@
     }
   }
   &__description {
+    @include font($size: 1.4rem, $height: 2.1rem);
     @include media-mobile {
       @include font($size: 1.2rem, $height: 1.8rem);
-    }
+    }    
   }
 }

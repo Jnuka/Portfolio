@@ -66,8 +66,10 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 40px 0;
+      gap: 10px;
     }
     @include media-mobile-600 {
+      gap: 0;
       padding-top: 24px;
       padding-bottom: 32px;
     }
@@ -88,7 +90,10 @@
     gap: 10px;
     @include media-tablet {
       margin-bottom: 20px;
-    }
+    }    
+  }
+  &__text {
+    list-style: none;
   }
   &__time {
     grid-column: 1 / 2;
